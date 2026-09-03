@@ -1,0 +1,403 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP+csXI6+v+0OuDyRXa1Ed7",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/hwangmn27/INFO450_FALL26/blob/main/Lesson%206\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "TuluEwNFykbB"
+      },
+      "outputs": [],
+      "source": [
+        "Conditionals\n",
+        "\n",
+        "Every condition can be expressed as a boolean operator.\n",
+        "Ex. x=0 y=3\n",
+        "\n",
+        "x==y #is x equal to y\n",
+        "x!=y #is x not equal to y\n",
+        "x>y #is x greater than y\n",
+        "x<y #is x less than y\n",
+        "x>=y #is x greater than or equal to y\n",
+        "x<=y #is x less than or equal to y\n",
+        "\n",
+        "Locgial Operators: \"and\" \"or\"\n",
+        "Ex. y>2 and x<7 #both are true therefore the whole statement is true\n",
+        "    y<2 and x<7 #y<2 is false x<7 is true therefore the statement is true\n",
+        "\n",
+        "if x>5: #':' means do this if true\n",
+        "  print (\"x is large\")#must indent\n",
+        "print(\"outside the if\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "name=\"\" #blanks come out as false\n",
+        "print(name)\n",
+        "print(bool(name))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tuVwpms73NBW",
+        "outputId": "743e11ae-7506-4d7e-a237-50027b926b45"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "bool(0) #0 is also false"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yU-dbgby3OnH",
+        "outputId": "2a4a63d4-572a-4e5d-dba2-e261e7a10620"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "if Statment"
+      ],
+      "metadata": {
+        "id": "mTCQRiRK3rub"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=10\n",
+        "if x>5:\n",
+        "  print('x is greater than 5')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fOuDHkMF3f6p",
+        "outputId": "27b553f7-be0d-47ff-e05a-de43906135de"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x is greater than 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "if Else Statment"
+      ],
+      "metadata": {
+        "id": "kX9uxsEg3-9c"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=3\n",
+        "if x>5:\n",
+        "  print('x is greater than 5')\n",
+        "else:\n",
+        "  print('x is not greater than 5')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lrP8sN-R3yI0",
+        "outputId": "93acdfa9-f39f-4677-8e17-695d209c4071"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x is not greater than 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=81\n",
+        "if x>90:\n",
+        "  print('Grade A')\n",
+        "elif x>80:\n",
+        "  print('Grade B')\n",
+        "elif x>70:\n",
+        "  print('Grade C')\n",
+        "else:\n",
+        "  print('summer school')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rGssLdqa4MFw",
+        "outputId": "73237889-1c22-4aca-cabf-54e6fbde4a5e"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Grade B\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Logical Operators"
+      ],
+      "metadata": {
+        "id": "pv3rdvCB5OcL"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "age=25\n",
+        "income=50000\n",
+        "#want to make sure they are an adult makeing 40K a year\n",
+        "if age>18 and income>40000:\n",
+        "  print('congrats on the loan')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "snY4YFdq4307",
+        "outputId": "74e89377-7e6a-42d8-d3c6-28c0c430e045"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "congrats on the loan\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "age=25\n",
+        "income=50000\n",
+        "#want to make sure they are going to pay me back\n",
+        "if (age>18 and income>40000) or income>4000000:\n",
+        "  print('congrats on the loan')\n",
+        "else:\n",
+        "     print('sorry you are not old enough')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3EHO62Vn5rkE",
+        "outputId": "b505a843-b3c9-4849-97c9-ec96469534ea"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "congrats on the loan\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "hours_worked=40\n",
+        "performance_score=85\n",
+        "tenure=2 #years with the company\n",
+        "if (hours_worked>=40 and performance_score>80) or tenure>=2:\n",
+        "  print('bonus')\n",
+        "else:\n",
+        "  print('no bonus')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v6qadwEQ5_yX",
+        "outputId": "3fdbe706-a27e-4508-b69d-a8a9b1c73bbf"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "bonus\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Nested Condtions"
+      ],
+      "metadata": {
+        "id": "oRNeT2hA7Zhy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=3\n",
+        "y=4\n",
+        "if x==y:\n",
+        "  print('x and y are equal')\n",
+        "else:\n",
+        "  if x<y:\n",
+        "    print('x is smaller')\n",
+        "  else:\n",
+        "    print('y is smaller')\n",
+        "print('outside of if statement')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "i0DYq99f6uQx",
+        "outputId": "8f03b695-97b4-42cb-dd73-e20d6d8f06c0"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x is smaller\n",
+            "outside of if statement\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Scores"
+      ],
+      "metadata": {
+        "id": "B0ypcLfU8EJq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "scores=[80,45,78,96,88]"
+      ],
+      "metadata": {
+        "id": "KFRZS3Tu7g3y"
+      },
+      "execution_count": 30,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if min(scores)>60:\n",
+        "  print('yall passed')\n",
+        "else:\n",
+        "  print('yall failed')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fQSa2Bdk8M7h",
+        "outputId": "51736909-4e96-4223-e0e3-25f8096d0e1e"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "yall failed\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "xl_LYZHk8UlC"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
