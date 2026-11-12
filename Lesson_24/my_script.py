@@ -6,7 +6,7 @@ import plotly.express as px
 df=pd.read_csv("Advertising_F.csv")
 st.title("Advertising Effectiveness Max Hwang")
 
-st.sidebar.head("Filters")
+st.sidebar.header("Filters")
 x_var=st.selectbox('X axis', ['TV', 'Radio', 'Newspaper'])
 
 #show scatterplot
