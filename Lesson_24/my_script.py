@@ -1,25 +1,25 @@
-
+import os
 import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-df=pd.read_csv("Advertising_F.csv")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+df = pd.read_csv(os.path.join(BASE_DIR, "Advertising_F.csv"))
+
 st.title("Advertising Effectiveness Max Hwang")
 
 st.sidebar.header("Filters")
-x_var=st.selectbox('X axis', ['TV', 'Radio', 'Newspaper'])
+x_var = st.selectbox('X axis', ['TV', 'Radio', 'Newspaper'])
 
-#show scatterplot
-fig=px.scatter(df, x=x_var, y='sales', labels={'TV':'TV add spend', 'radio':'Radio add spend'})
-
+# show scatterplot
+fig = px.scatter(df, x=x_var, y='Sales', labels={'TV': 'TV ad spend', 'Radio': 'Radio ad spend'})
 st.plotly_chart(fig)
 
-#show barplot
-
-sales_per_city=df.groupby('City')['sales'].sum().reset_index()
-fig=px.bar(sales_per_city, x='City', y='Sales', title='Data is Fun')
+# show barplot
+sales_per_city = df.groupby('City')['Sales'].sum().reset_index()
+fig = px.bar(sales_per_city, x='City', y='Sales', title='Total Sales by City')
 st.plotly_chart(fig)
 
-#show dataframe
+# show dataframe
 st.dataframe(df)
 
